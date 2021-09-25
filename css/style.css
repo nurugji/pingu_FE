@@ -1,0 +1,49 @@
+.dropdown {
+  position: relative;
+}
+/* relative를 통해서 dropdown을 기준으로 offset을 적용하도록 합니다 */
+
+.dropdown__menu {
+  display: none;
+  width: 7rem;
+  border: solid 1px black;
+}
+/* dropdown이 click되기 전에 display를 숨겨줍니다 */
+/* rem을 통해서 사용자가 font-size를 변경해도 dropdown_menu의 
+width가 dropdown text의 width와 비슷한 폭을 유지하도록 합니다  */
+
+.open__dropdown {
+  display: block;
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+}
+/* click시에 display를 다시 보여줍니다 */
+/* absolute를 이용해 offset을 통해 자유롭게 dropdown__menu의 위치를 
+배치할 수 있습니다*/
+
+.nav__links {
+  display: flex;
+  background-color: powderblue;
+  list-style: none;
+  padding: 0;
+}
+/* li로 인해서 기호가 붙게 되는데 기호를 지우고 지워진 자리의 padding을
+지워줍니다 */
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+}
+/* a tag는 line-block으로 nav__link와 dropdown__menu의 a들의 배치가 깨질 수 있으므로 block를 이용해 하나의 column을 유지하도록 합니다 */
+/* a tag를 click할 수 있는 범위를 넓혀주기 위해 padding을 설정해줍니다 */
+
+.dropdown__menu > a {
+  background-color: white;
+}
+
+.mouse-enter {
+  background-color: white;
+}
