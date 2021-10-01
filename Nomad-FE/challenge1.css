@@ -1,78 +1,72 @@
 body {
-  display: flex;
-  justify-content: center;
-  padding: 160px 40px;
-}
-#poster {
-  flex-shrink: 0;
-  width: 580px;
+  height: 100%;
+  padding: 1rem;
+  width: 100%;
+  max-width: 770px;
   background-color: whitesmoke;
-  padding: 2rem;
+  margin: 2rem auto;
   box-shadow: 1rem 1rem 0.8rem rgb(227, 226, 213);
-}
-.contain {
-  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.head {
-  align-items: baseline;
-  justify-content: center;
-}
 header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 10rem;
   border-bottom: 0.2rem solid black;
-  padding-bottom: 1rem;
 }
 h1 {
-  margin: 0px;
-  height: 80px;
-  font-size: 6rem;
+  font-size: 6em;
   font-weight: 900;
+  margin: 0;
 }
 h2 {
-  margin: 0px;
-  margin-left: auto;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin: 0;
 }
-/* h1와 h2는 기본적으로 margin을 가지고 있다 */
-/* 그런데 text의 높이보다 더 큰 content height영역을 가지고 있는데 이유가 무엇인가 */
 
-.list {
-  justify-content: space-around;
-  font-size: 0.5rem;
-  padding: 1rem 0 3rem 0;
+body > div {
+  display: flex;
+  font-size: 0.7rem;
+  padding-top: 1rem;
 }
 ul {
-  margin-top: 0px;
   list-style: none;
-  padding-left: 0px;
-  padding-right: 3rem;
+  padding: 0 3rem 0 0;
+  margin: 0;
 }
 aside {
   margin-left: auto;
 }
 
-.main {
-  padding: 1rem;
-  height: 32rem;
+#circle {
   display: flex;
-  justify-content: space-around;
-  align-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-top: 4rem;
 }
-/* wrap을 사용하면 여러개의 conatin을 만들지 않아도 된다 */
-.circle {
-  width: 10rem;
-  height: 10rem;
+#circle > div {
+  width: 12.5rem;
+  height: 12.5rem;
   border-radius: 50%;
+  margin-bottom: 1rem;
 }
-/* 원을 만들때 사각형을 만든다음 border-radius를 이용한다 */
-.a {
+
+#circle div:nth-child(1),
+#circle div:nth-child(2),
+#circle div:nth-child(3) {
   background-color: rgb(179, 171, 207);
 }
-.b {
+
+#circle div:nth-child(4),
+#circle div:nth-child(5),
+#circle div:nth-child(6) {
   background-color: rgb(234, 174, 152);
 }
-.c {
+#circle div:nth-child(7),
+#circle div:nth-child(8),
+#circle div:nth-child(9) {
   background-color: rgb(205, 235, 204);
 }
-/* 띄어쓰기로 된 전체 class을 각각 class를 가지고 css를 적용할 수 있다 */
