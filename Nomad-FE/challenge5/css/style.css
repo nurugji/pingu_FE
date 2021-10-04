@@ -1,0 +1,117 @@
+body {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+body > div {
+  display: grid;
+  grid-template: "sidebar sidebar sidebar sidebar" 0.15fr "head empty code country " 1fr "nav . code country" 1fr "nav ticket code country" 1fr/1fr 1fr 1fr 1fr;
+  background-color: white;
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  margin: 10%;
+}
+
+.grid > div:nth-child(1) {
+  grid-area: sidebar;
+  background-color: #bdbec0;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.grid > div:nth-child(1) .button {
+  position: absolute;
+  display: flex;
+  margin-left: 4px;
+}
+.grid > div:nth-child(1) .button div {
+  width: 8px;
+  height: 8px;
+  border: 0.8px solid #929499;
+  border-radius: 50%;
+  margin: 4px;
+}
+.grid > div:nth-child(1) .bar {
+  width: 30%;
+  height: 13px;
+  border: 0.8px solid #929499;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+.grid > div:nth-child(2) {
+  grid-area: head;
+  background-color: #000000;
+}
+.grid > div:nth-child(2) > p {
+  text-align-last: justify;
+  color: white;
+  width: min-content;
+  margin: 0;
+  line-height: 1.3rem;
+}
+.grid > div:nth-child(2) > p > span {
+  height: 16px;
+  display: inline-block;
+  transform: rotate(180deg);
+}
+.grid > div:nth-child(3) {
+  grid-area: empty;
+  background-color: #6b01ff;
+}
+.grid > div:nth-child(4) {
+  grid-area: nav;
+  background-color: #ff1603;
+  border-bottom-left-radius: 10px;
+}
+.grid > div:nth-child(4) ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.grid > div:nth-child(4) ul li {
+  height: 20px;
+}
+.grid > div:nth-child(5) {
+  grid-area: ticket;
+  background-color: #ffc906;
+}
+.grid > div:nth-child(6) {
+  grid-area: code;
+}
+.grid > div:nth-child(7) {
+  grid-area: country;
+}
+
+.card {
+  padding: 5%;
+  font-size: 1.5rem;
+}
+
+.main {
+  font-size: 1rem;
+  padding-left: 10%;
+}
+.main p {
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 0.7rem;
+}
+.main ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main ul li {
+  width: fit-content;
+}
+.main ul li:nth-child(15) {
+  background-color: #6b01ff;
+}
+
+/*# sourceMappingURL=style.css.map */
