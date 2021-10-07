@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  width: 100%;
+  display: grid;
+  position: fixed;
+  grid-template-columns: repeat(5, 1fr);
+}
+nav i {
+  margin-left: auto;
+}
+nav div {
+  background-color: white;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
+  padding: 0.8rem;
+  display: flex;
+}
+nav div:nth-child(5) {
+  border-right: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3.5%;
+}
+main > div {
+  width: 400px;
+  flex-grow: 1;
+  height: 345px;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+}
+main > div > div {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main > div:nth-child(1) > div {
+  background-image: url("../img/anirudh-ZbTrvdO48Ws-unsplash.jpg");
+}
+main > div:nth-child(2) > div {
+  background-image: url("../img/channey-NuGBr_whPHE-unsplash.jpg");
+}
+main > div:nth-child(3) > div {
+  background-image: url("../img/freguesia-de-estrela-f4Jvit7oIXY-unsplash.jpg");
+}
+main > div:nth-child(4) > div {
+  background-image: url("../img/jon-tyson-C_bovKgPvjM-unsplash.jpg");
+}
+main > div:nth-child(5) > div {
+  background-image: url("../img/li-zhang-K-DwbsTXliY-unsplash.jpg");
+}
+main > div:nth-child(6) > div {
+  background-image: url("../img/mia-baker-jjhvyxm34nY-unsplash.jpg");
+}
+main > div:nth-child(7) > div {
+  background-image: url("../img/paul-garaizar-cjiMPmJPmz0-unsplash.jpg");
+}
+main > div:nth-child(8) > div {
+  background-image: url("../img/paul-garaizar-RUNZ-R8ni_s-unsplash.jpg");
+}
+main > div:nth-child(9) > div {
+  background-image: url("../img/sergey-vinogradov-TumlkJpclYY-unsplash.jpg");
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card header,
+.card footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.card footer > div:nth-child(1) {
+  border-bottom: 1px solid black;
+}
+.card footer > div:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.card > div {
+  display: flex;
+  align-self: center;
+  width: 300px;
+  height: 200px;
+}
+
+.open {
+  display: block;
+}
+
+body > nav > div {
+  position: relative;
+}
+body > nav > div > ul {
+  position: absolute;
+  display: none;
+  width: 100%;
+  max-height: 270px;
+  border: 4px solid black;
+  background-color: white;
+  overflow: auto;
+  top: 42px;
+  left: -4px;
+}
+body > nav > div > ul > li {
+  padding: 0.8rem;
+}
+body > nav > div > ul > li:hover {
+  background-color: gray;
+}
+
+/*# sourceMappingURL=style.css.map */
