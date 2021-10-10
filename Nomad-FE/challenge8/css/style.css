@@ -1,0 +1,336 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+body .main {
+  display: flex;
+  height: 100%;
+  padding: 1.5rem 0;
+}
+
+.content {
+  background-color: #ffdaa3;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: auto;
+}
+.content .content-item {
+  background-color: #ffdaa3;
+  border: 3px solid #ffaa91;
+  color: #ffaa91;
+  display: grid;
+  min-height: 16%;
+  margin: -3px;
+  grid-template: "side title article" 1fr "side title year" 1fr/0.2fr 2.7fr 1fr;
+}
+.content .content-item:hover {
+  z-index: 1;
+  color: white;
+  border: 3px solid white;
+  cursor: pointer;
+}
+.content .content-item:hover > div:nth-child(1) {
+  border-left: 3px solid white;
+}
+.content .content-item:hover > div:nth-child(2) {
+  border-right: 3px solid white;
+}
+.content .content-item:hover > div:nth-child(3) {
+  border-bottom: 3px solid white;
+}
+.content .content-item:hover > div:nth-child(4) > div {
+  background-color: white;
+}
+.content .content-item > div:nth-child(1) {
+  grid-area: side;
+  writing-mode: vertical-lr;
+  display: flex;
+  align-items: center;
+  font-size: 1.2vw;
+  justify-content: center;
+  transform: rotate(180deg);
+  border-left: 3px solid #ffaa91;
+}
+.content .content-item > div:nth-child(2) {
+  grid-area: title;
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  border-right: 3px solid #ffaa91;
+}
+.content .content-item > div:nth-child(3) {
+  font-size: 1.5vw;
+  grid-area: article;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #ffaa91;
+}
+.content .content-item > div:nth-child(4) {
+  font-size: 1vw;
+  grid-area: year;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-item > div:nth-child(4) > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+  width: 80%;
+  height: 50%;
+  background-color: #ffaa91;
+  color: #ffdaa3;
+  border-radius: 50px;
+}
+
+.nav {
+  position: fixed;
+  margin-left: 60%;
+  width: 40%;
+  height: calc(100vh - 3rem);
+  display: flex;
+}
+.nav .line {
+  font-size: 2vw;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(#b9dfdc 50%, #ffdaa3 50% 100%);
+}
+.nav .line > div {
+  height: 50%;
+}
+.nav .line > div > i {
+  transform: rotate(90deg);
+  padding: 0.5rem;
+}
+.nav .line > div:nth-child(1) {
+  background-color: #ffdaa3;
+  color: #ffaa91;
+  border-radius: 0 20px 20px 0;
+  writing-mode: vertical-lr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav .line > div:nth-child(2) {
+  background-color: #b9dfdc;
+  color: #819ed1;
+  border-radius: 0 20px 20px 0;
+  writing-mode: vertical-lr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+}
+.nav .side {
+  background-color: #b9dfdc;
+  color: #819ed1;
+  width: 90%;
+  padding: 0 1rem;
+}
+.nav .side .side-bar {
+  padding: 0.7rem 0;
+  width: 100%;
+  display: flex;
+  height: 8%;
+  justify-content: space-between;
+  font-size: 2vw;
+}
+.nav .side .side-bar > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .side .side-bar > div:nth-child(3) > div:nth-child(1) {
+  background-color: #819ed1;
+}
+.nav .side .side-bar > div > div:nth-child(1) {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  border: 3px solid #819ed1;
+  background-color: #b9dfdc;
+  margin-right: 10px;
+}
+.nav .side .side-bar > div:hover {
+  color: white;
+  cursor: pointer;
+}
+.nav .side .side-bar > div:hover > div:nth-child(1) {
+  border: 3px solid white;
+}
+.nav .side .side-content {
+  overflow: auto;
+  display: grid;
+  height: 92%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0.8rem;
+}
+.nav .side .side-content > div {
+  padding: 1rem 0;
+  border-top: 3px solid #819ed1;
+}
+.nav .side .side-content > div:hover {
+  color: white;
+  border-top: 3px solid white;
+  cursor: pointer;
+}
+.nav .side .side-content > div > h4 {
+  font-size: 2vw;
+}
+.nav .side .side-content > div > p {
+  width: 100%;
+  height: 60px;
+  overflow: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
